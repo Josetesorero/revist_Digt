@@ -1,0 +1,640 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Open Sans',sans-serif;background:#1a1a2e}
+.mag{width:794px;margin:0 auto;background:#fff;font-family:'Open Sans',sans-serif}
+.page{width:794px;min-height:1123px;position:relative;overflow:hidden;page-break-after:always;break-after:page}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+
+/* PORTADA */
+.cover{background:#0A192F;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:0}
+.cover-top{padding:48px 56px 0}
+.cover-uni{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;color:#64FFDA;letter-spacing:3px;text-transform:uppercase}
+.cover-line{width:60px;height:2px;background:#64FFDA;margin:12px 0 32px}
+.cover-label{font-size:11px;color:#8892B0;letter-spacing:2px;text-transform:uppercase;font-family:'Montserrat',sans-serif;font-weight:600;margin-bottom:8px}
+.cover-title{font-family:'Montserrat',sans-serif;font-size:64px;font-weight:900;line-height:1;color:#CCD6F6;margin-bottom:4px}
+.cover-title span{color:#64FFDA}
+.cover-subtitle{font-size:18px;font-weight:400;color:#8892B0;margin-top:16px;font-family:'Montserrat',sans-serif}
+.cover-geo{position:absolute;right:0;top:0;width:340px;height:100%;background:linear-gradient(135deg,#112240 0%,#0A192F 100%)}
+.cover-circle1{position:absolute;right:60px;top:80px;width:280px;height:280px;border-radius:50%;border:1px solid rgba(100,255,218,0.15)}
+.cover-circle2{position:absolute;right:100px;top:120px;width:200px;height:200px;border-radius:50%;border:1px solid rgba(100,255,218,0.25)}
+.cover-circle3{position:absolute;right:140px;top:160px;width:120px;height:120px;border-radius:50%;background:rgba(100,255,218,0.05);border:1px solid rgba(100,255,218,0.4)}
+.cover-dot{position:absolute;right:190px;top:210px;width:20px;height:20px;border-radius:50%;background:#64FFDA}
+.cover-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px}
+.tag{padding:6px 14px;border:1px solid rgba(100,255,218,0.3);border-radius:20px;font-size:10px;color:#64FFDA;font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.cover-bottom{background:#112240;padding:32px 56px;display:flex;justify-content:space-between;align-items:center}
+.cover-team{font-family:'Montserrat',sans-serif;font-size:13px;color:#8892B0}
+.cover-team strong{color:#64FFDA;font-weight:700}
+.cover-date{font-family:'Montserrat',sans-serif;font-size:11px;color:#8892B0;text-align:right}
+
+/* ÍNDICE */
+.index-page{background:#F8FAFC;padding:56px}
+.section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#64FFDA;font-family:'Montserrat',sans-serif;margin-bottom:8px}
+.page-title{font-family:'Montserrat',sans-serif;font-size:38px;font-weight:900;color:#0A192F;margin-bottom:8px}
+.title-bar{width:48px;height:4px;background:#64FFDA;margin-bottom:40px}
+.index-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.index-item{display:flex;align-items:center;gap:16px;padding:16px 20px;background:#fff;border-radius:8px;border-left:3px solid #64FFDA;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+.index-num{font-family:'Montserrat',sans-serif;font-size:28px;font-weight:900;color:#E2E8F0;min-width:36px}
+.index-info{flex:1}
+.index-name{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:#0A192F}
+.index-type{font-size:11px;color:#8892B0;margin-top:2px}
+.index-footer{margin-top:32px;padding:20px;background:#0A192F;border-radius:8px;color:#8892B0;font-size:12px;line-height:1.6}
+.index-footer strong{color:#64FFDA}
+
+/* INTRO */
+.intro-page{padding:56px;background:#fff}
+.intro-2col{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.intro-text{font-size:13px;line-height:1.8;color:#4A5568}
+.stat-box{background:#0A192F;border-radius:8px;padding:24px;text-align:center;margin-top:24px}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:42px;font-weight:900;color:#64FFDA}
+.stat-label{font-size:11px;color:#8892B0;margin-top:4px;font-family:'Montserrat',sans-serif}
+.nosql-types{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:24px}
+.type-card{padding:12px;background:#F0F7FF;border-radius:6px;text-align:center}
+.type-icon{font-size:20px;margin-bottom:4px}
+.type-name{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:#0A192F}
+
+/* DB PAGES */
+.db-page{background:#fff;padding:0}
+.db-banner{padding:28px 48px;display:flex;align-items:center;justify-content:space-between}
+.db-name{font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;color:#fff}
+.db-type-badge{padding:6px 16px;background:rgba(255,255,255,0.15);border-radius:20px;font-size:10px;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.db-body{padding:32px 48px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.db-section{background:#F8FAFC;border-radius:8px;padding:20px}
+.db-section-title{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.db-list{list-style:none;padding:0}
+.db-list li{font-size:12px;line-height:1.6;color:#4A5568;padding:6px 0;border-bottom:0.5px solid #E2E8F0;display:flex;gap:8px}
+.db-list li:last-child{border-bottom:none}
+.bullet-teal{color:#64FFDA;font-weight:900;font-size:14px;flex-shrink:0;margin-top:2px}
+.bullet-red{color:#FC8181;font-weight:900;font-size:14px;flex-shrink:0;margin-top:2px}
+.highlight-box{grid-column:1/-1;padding:20px;border-radius:8px;display:flex;align-items:center;gap:20px}
+.hl-num{font-family:'Montserrat',sans-serif;font-size:36px;font-weight:900;min-width:80px}
+.hl-text{font-size:12px;line-height:1.6}
+.hl-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:13px;margin-bottom:2px}
+
+/* COLORS */
+.bg-mongodb{background:linear-gradient(135deg,#023430,#00684A)}
+.bg-redis{background:linear-gradient(135deg,#7A0C0C,#CC0000)}
+.bg-couchbase{background:linear-gradient(135deg,#00194A,#0055A4)}
+.bg-perst{background:linear-gradient(135deg,#2D1B5E,#5E35B1)}
+.bg-myoodb{background:linear-gradient(135deg,#1A3A2A,#2E7D32)}
+.bg-hypertable{background:linear-gradient(135deg,#1A2A3A,#1565C0)}
+.hl-mongodb{background:#E8F5E9;color:#1B5E20}
+.hl-redis{background:#FFF3E0;color:#E65100}
+.hl-couchbase{background:#E3F2FD;color:#0D47A1}
+.hl-perst{background:#F3E5F5;color:#4A148C}
+.hl-myoodb{background:#E8F5E9;color:#1B5E20}
+.hl-hypertable{background:#E3F2FD;color:#0D47A1}
+.ic-mongodb{color:#00684A}
+.ic-redis{color:#CC0000}
+.ic-couchbase{color:#0055A4}
+.ic-perst{color:#5E35B1}
+.ic-myoodb{color:#2E7D32}
+.ic-hypertable{color:#1565C0}
+
+/* COMPARATIVE */
+.comp-page{padding:48px;background:#F8FAFC}
+.comp-table{width:100%;border-collapse:collapse;margin-top:24px;font-size:11px}
+.comp-table th{background:#0A192F;color:#64FFDA;padding:12px 10px;text-align:left;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:1px;font-size:10px;text-transform:uppercase}
+.comp-table td{padding:10px;border-bottom:0.5px solid #E2E8F0;color:#4A5568;line-height:1.5;vertical-align:top}
+.comp-table tr:nth-child(even) td{background:#EDF2F7}
+.comp-table tr:hover td{background:#E6FFFA}
+.db-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;font-family:'Montserrat',sans-serif}
+
+/* CONCLUSIONS */
+.conc-page{padding:56px;background:#fff}
+.conc-quote{border-left:4px solid #64FFDA;padding:20px 28px;margin:32px 0;background:#F0FFF4;border-radius:0 8px 8px 0}
+.conc-quote p{font-size:14px;line-height:1.8;color:#2D3748;font-style:italic}
+.conc-2col{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+.conc-text{font-size:13px;line-height:1.8;color:#4A5568}
+.future-card{background:#0A192F;color:#8892B0;border-radius:8px;padding:24px;margin-top:24px;font-size:12px;line-height:1.8}
+.future-card h4{color:#64FFDA;font-family:'Montserrat',sans-serif;font-size:14px;margin-bottom:10px}
+
+/* CONTRAPORTADA */
+.back-cover{background:#0A192F;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 56px}
+.bc-phrase{font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#CCD6F6;line-height:1.3;margin:32px 0}
+.bc-phrase span{color:#64FFDA}
+.bc-credits{color:#8892B0;font-size:12px;line-height:2}
+.bc-line{width:80px;height:2px;background:#64FFDA;margin:32px auto}
+.bc-circle{width:80px;height:80px;border-radius:50%;border:2px solid #64FFDA;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.bc-circle-text{font-family:'Montserrat',sans-serif;font-size:10px;color:#64FFDA;font-weight:700;letter-spacing:1px}
+.refs{font-size:10px;color:#4A5568;margin-top:16px;line-height:1.8}
+.refs strong{color:#0A192F;font-family:'Montserrat',sans-serif}
+</style>
+
+<div class="mag">
+
+<!-- PORTADA -->
+<div class="page cover">
+  <div class="cover-geo"></div>
+  <div class="cover-circle1"></div>
+  <div class="cover-circle2"></div>
+  <div class="cover-circle3"></div>
+  <div class="cover-dot"></div>
+  <div class="cover-top" style="position:relative;z-index:2">
+    <div class="cover-uni">Universidad Centroccidental "Lisandro Alvarado" &nbsp;·&nbsp; Ing. Telemática</div>
+    <div class="cover-line"></div>
+    <div class="cover-label">Electiva I · Tecnología de BD Avanzadas · INT533</div>
+    <div class="cover-title">NoSQL<br><span>Review</span></div>
+    <div class="cover-subtitle">Bases de Datos No Relacionales · Edición 2026-1</div>
+    <div class="cover-tags" style="margin-top:28px">
+      <span class="tag">MongoDB</span>
+      <span class="tag">Redis</span>
+      <span class="tag">Couchbase</span>
+      <span class="tag">Perst</span>
+      <span class="tag">MyOODB</span>
+      <span class="tag">Hypertable</span>
+    </div>
+  </div>
+  <div class="cover-bottom" style="position:relative;z-index:2">
+    <div class="cover-team">Actividad: Revista Digital + Video &nbsp;|&nbsp; <strong>Equipo A</strong></div>
+    <div class="cover-date">Lapso Académico 2026-1<br>Entrega: 29 de mayo de 2026<br>Puntuación: 10%</div>
+  </div>
+</div>
+
+<!-- ÍNDICE -->
+<div class="page index-page">
+  <div class="section-label">Contenido</div>
+  <div class="page-title">Tabla de<br>Contenido</div>
+  <div class="title-bar"></div>
+  <div class="index-grid">
+    <div class="index-item"><div class="index-num">01</div><div class="index-info"><div class="index-name">Introducción a NoSQL</div><div class="index-type">Contexto, historia e importancia</div></div></div>
+    <div class="index-item"><div class="index-num">02</div><div class="index-info"><div class="index-name">MongoDB</div><div class="index-type">Base de datos orientada a documentos</div></div></div>
+    <div class="index-item"><div class="index-num">03</div><div class="index-info"><div class="index-name">Redis</div><div class="index-type">Base de datos clave-valor en memoria</div></div></div>
+    <div class="index-item"><div class="index-num">04</div><div class="index-info"><div class="index-name">Couchbase</div><div class="index-type">BD documentos + clave-valor</div></div></div>
+    <div class="index-item"><div class="index-num">05</div><div class="index-info"><div class="index-name">Perst</div><div class="index-type">Base de datos orientada a objetos</div></div></div>
+    <div class="index-item"><div class="index-num">06</div><div class="index-info"><div class="index-name">MyOODB</div><div class="index-type">Base de datos orientada a objetos</div></div></div>
+    <div class="index-item"><div class="index-num">07</div><div class="index-info"><div class="index-name">Hypertable</div><div class="index-type">Base de datos orientada a columnas</div></div></div>
+    <div class="index-item"><div class="index-num">08</div><div class="index-info"><div class="index-name">Tabla Comparativa</div><div class="index-type">Análisis comparativo de los 6 sistemas</div></div></div>
+    <div class="index-item" style="grid-column:1/-1"><div class="index-num">09</div><div class="index-info"><div class="index-name">Conclusiones y Referencias</div><div class="index-type">Reflexiones finales y bibliografía</div></div></div>
+  </div>
+  <div class="index-footer">
+    <strong>Asignatura:</strong> Electiva I — Tecnología de Base de Datos Avanzadas (INT533) &nbsp;·&nbsp; 
+    <strong>Docente:</strong> Ing. Gisela Parra &nbsp;·&nbsp; 
+    <strong>Programa:</strong> Ingeniería Telemática &nbsp;·&nbsp; 
+    <strong>Institución:</strong> UCLA — Universidad Centroccidental "Lisandro Alvarado", Barquisimeto, Venezuela
+  </div>
+</div>
+
+<!-- INTRODUCCIÓN -->
+<div class="page intro-page">
+  <div class="section-label">Sección 01</div>
+  <div class="page-title">Introducción<br>a NoSQL</div>
+  <div class="title-bar"></div>
+  <div class="intro-2col">
+    <div>
+      <p class="intro-text">Las bases de datos <strong>NoSQL</strong> (Not Only SQL) surgieron como respuesta a las limitaciones del modelo relacional frente al fenómeno del Big Data. A partir de 2009, con el auge de aplicaciones web a escala masiva, empresas como Google, Amazon y Facebook desarrollaron sistemas capaces de manejar petabytes de datos distribuidos en miles de servidores.</p>
+      <p class="intro-text" style="margin-top:12px">A diferencia del modelo relacional, las BD NoSQL no requieren esquemas fijos, no soportan operaciones JOIN tradicionales y están optimizadas para escalar horizontalmente. Su flexibilidad las hace ideales para datos semiestructurados, no estructurados y en constante evolución.</p>
+      <div class="stat-box">
+        <div class="stat-num">80%</div>
+        <div class="stat-label">de los datos empresariales son no estructurados — demasiados para las BD relacionales tradicionales</div>
+      </div>
+    </div>
+    <div>
+      <p class="intro-text">Las BD NoSQL se clasifican en cuatro grandes modelos según su forma de organizar los datos:</p>
+      <div class="nosql-types">
+        <div class="type-card"><div class="type-icon">🗝️</div><div class="type-name">Clave-Valor</div></div>
+        <div class="type-card"><div class="type-icon">📄</div><div class="type-name">Documentos</div></div>
+        <div class="type-card"><div class="type-icon">🕸️</div><div class="type-name">Grafos</div></div>
+        <div class="type-card"><div class="type-icon">📊</div><div class="type-name">Columnas</div></div>
+      </div>
+      <p class="intro-text" style="margin-top:16px">Sus características principales incluyen: <strong>flexibilidad</strong> de esquema, <strong>escalabilidad</strong> horizontal mediante clústeres distribuidos, <strong>alto rendimiento</strong> en lectura/escritura, y APIs <strong>altamente funcionales</strong> adaptadas a cada modelo de datos. Su crecimiento ha sido exponencial: Cassandra, por ejemplo, maneja más de 300 TB distribuidos en 400 máquinas solo en Twitter.</p>
+      <p class="intro-text" style="margin-top:12px">En esta edición, el <strong>Equipo A</strong> analiza seis sistemas NoSQL representativos de distintos enfoques tecnológicos, examinando sus características, ventajas, limitaciones y aplicaciones industriales.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MONGODB -->
+<div class="page db-page">
+  <div class="db-banner bg-mongodb">
+    <div><div class="db-name">MongoDB</div><div style="font-size:12px;color:rgba(255,255,255,0.7);font-family:Montserrat,sans-serif;margin-top:4px">Fundada en 2007 · Nueva York, EE.UU.</div></div>
+    <div class="db-type-badge">Orientada a Documentos</div>
+  </div>
+  <div class="db-body">
+    <div class="db-section">
+      <div class="db-section-title ic-mongodb">◆ <span>Características</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">›</span>Almacena datos en formato <strong>BSON</strong> (Binary JSON), permitiendo documentos anidados y arrays</li>
+        <li><span class="bullet-teal">›</span>Esquema dinámico: cada documento puede tener estructura diferente sin definición previa</li>
+        <li><span class="bullet-teal">›</span>Soporte nativo para <strong>sharding</strong> (particionado horizontal) y replicación automática</li>
+        <li><span class="bullet-teal">›</span>Motor de consultas rico con soporte para aggregation pipeline, índices geoespaciales y texto</li>
+        <li><span class="bullet-teal">›</span>Compatible con transacciones <strong>ACID</strong> multi-documento desde versión 4.0</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-mongodb">◆ <span>Ventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">✓</span>Alta velocidad en lectura/escritura para datos no estructurados o semiestructurados</li>
+        <li><span class="bullet-teal">✓</span>Escalabilidad horizontal sencilla con clústeres distribuidos geográficamente</li>
+        <li><span class="bullet-teal">✓</span>Comunidad enorme, documentación exhaustiva y ecosystem maduro (Compass, Atlas)</li>
+        <li><span class="bullet-teal">✓</span>Integración natural con aplicaciones JavaScript/Node.js (documentos como objetos)</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-mongodb">◆ <span>Desventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-red">✗</span>Consumo elevado de memoria RAM y almacenamiento por redundancia de claves BSON</li>
+        <li><span class="bullet-red">✗</span>Menor soporte para relaciones complejas: los JOINs requieren $lookup (costoso)</li>
+        <li><span class="bullet-red">✗</span>Consistencia eventual en clústeres puede generar lecturas desactualizadas temporalmente</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-mongodb">◆ <span>Campos de Uso</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">→</span><strong>E-commerce:</strong> catálogos de productos con atributos variables por categoría</li>
+        <li><span class="bullet-teal">→</span><strong>Redes sociales:</strong> perfiles de usuario, publicaciones, comentarios anidados</li>
+        <li><span class="bullet-teal">→</span><strong>IoT:</strong> almacenamiento de series de tiempo y telemetría de dispositivos</li>
+        <li><span class="bullet-teal">→</span><strong>Gestión de contenidos:</strong> CMS, blogs, plataformas multimedia (eBay, Forbes)</li>
+      </ul>
+    </div>
+    <div class="highlight-box hl-mongodb">
+      <div class="hl-num" style="color:#1B5E20">38K+</div>
+      <div class="hl-text"><strong style="color:#1B5E20">Empresas en todo el mundo usan MongoDB</strong>Netflix, Toyota, Bosch y el gobierno del Reino Unido confían en MongoDB para sus sistemas críticos. Es la BD NoSQL más popular del mundo según DB-Engines Ranking.</div>
+    </div>
+  </div>
+</div>
+
+<!-- REDIS -->
+<div class="page db-page">
+  <div class="db-banner bg-redis">
+    <div><div class="db-name">Redis</div><div style="font-size:12px;color:rgba(255,255,255,0.7);font-family:Montserrat,sans-serif;margin-top:4px">Remote Dictionary Server · 2009 · Salvatore Sanfilippo</div></div>
+    <div class="db-type-badge">Clave-Valor · In-Memory</div>
+  </div>
+  <div class="db-body">
+    <div class="db-section">
+      <div class="db-section-title ic-redis">◆ <span>Características</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">›</span>Base de datos <strong>en memoria</strong> con persistencia opcional en disco (RDB snapshots / AOF logs)</li>
+        <li><span class="bullet-teal">›</span>Soporta múltiples estructuras de datos: strings, hashes, lists, sets, sorted sets, bitmaps, HyperLogLog</li>
+        <li><span class="bullet-teal">›</span>Operaciones <strong>atómicas</strong> garantizadas incluso en estructuras complejas</li>
+        <li><span class="bullet-teal">›</span>Pub/Sub messaging, Lua scripting y soporte para geolocalización</li>
+        <li><span class="bullet-teal">›</span>Latencia de microsegundos en lecturas; sub-milisegundo en escrituras</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-redis">◆ <span>Ventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">✓</span>Velocidad extrema: más de 100,000 operaciones por segundo en hardware estándar</li>
+        <li><span class="bullet-teal">✓</span>Versatilidad: funciona como caché, broker de mensajes, cola de tareas y sesión store</li>
+        <li><span class="bullet-teal">✓</span>Redis Cluster para particionado automático y alta disponibilidad</li>
+        <li><span class="bullet-teal">✓</span>Código abierto, licencia BSD, con versión Enterprise (Redis Stack)</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-redis">◆ <span>Desventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-red">✗</span>Capacidad limitada por el tamaño de la RAM disponible en el servidor</li>
+        <li><span class="bullet-red">✗</span>No es adecuado como base de datos principal para datos relacionales complejos</li>
+        <li><span class="bullet-red">✗</span>La persistencia en disco introduce latencia adicional; riesgo de pérdida de datos en caída</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-redis">◆ <span>Campos de Uso</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">→</span><strong>Caché de aplicaciones:</strong> aceleración de consultas a BD relacionales (Twitter, GitHub)</li>
+        <li><span class="bullet-teal">→</span><strong>Sesiones web:</strong> almacenamiento de tokens de autenticación y carritos de compra</li>
+        <li><span class="bullet-teal">→</span><strong>Leaderboards:</strong> clasificaciones en tiempo real en videojuegos y apps de deporte</li>
+        <li><span class="bullet-teal">→</span><strong>Mensajería:</strong> colas de trabajo, notificaciones push, sistemas pub/sub (Tinder, Snapchat)</li>
+      </ul>
+    </div>
+    <div class="highlight-box hl-redis">
+      <div class="hl-num" style="color:#E65100">1M+</div>
+      <div class="hl-text"><strong style="color:#E65100">Operaciones por segundo en configuraciones optimizadas</strong>Tinder usa Redis para emparejar millones de usuarios simultáneamente. Instagram lo utiliza para almacenar 300 millones de relaciones sociales con respuesta en milisegundos.</div>
+    </div>
+  </div>
+</div>
+
+<!-- COUCHBASE -->
+<div class="page db-page">
+  <div class="db-banner bg-couchbase">
+    <div><div class="db-name">Couchbase</div><div style="font-size:12px;color:rgba(255,255,255,0.7);font-family:Montserrat,sans-serif;margin-top:4px">Fusión de CouchDB + Membase · 2011</div></div>
+    <div class="db-type-badge">Documentos + Clave-Valor</div>
+  </div>
+  <div class="db-body">
+    <div class="db-section">
+      <div class="db-section-title ic-couchbase">◆ <span>Características</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">›</span>Combina almacenamiento de documentos JSON con un caché clave-valor integrado de alto rendimiento</li>
+        <li><span class="bullet-teal">›</span>Lenguaje de consulta <strong>N1QL</strong> (SQL para JSON): sintaxis familiar para desarrolladores SQL</li>
+        <li><span class="bullet-teal">›</span>Arquitectura de <strong>memoria compartida</strong> (shared-nothing) para máxima disponibilidad</li>
+        <li><span class="bullet-teal">›</span>Sincronización móvil nativa con Couchbase Mobile / Couchbase Lite para apps offline-first</li>
+        <li><span class="bullet-teal">›</span>Soporte para índices globales secundarios, índices de vistas y búsqueda full-text</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-couchbase">◆ <span>Ventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">✓</span>Baja latencia predecible y consistente incluso bajo alta carga (bajo percentil 99)</li>
+        <li><span class="bullet-teal">✓</span>Ideal para apps móviles: sincronización delta y modo offline integrado</li>
+        <li><span class="bullet-teal">✓</span>Escalabilidad lineal: añadir nodos aumenta capacidad sin reconfiguración manual</li>
+        <li><span class="bullet-teal">✓</span>Herramientas de administración visual (Couchbase Web Console) intuitivas</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-couchbase">◆ <span>Desventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-red">✗</span>Curva de aprendizaje pronunciada para equipos nuevos en arquitecturas NoSQL distribuidas</li>
+        <li><span class="bullet-red">✗</span>Licencia Enterprise con costo elevado para funcionalidades avanzadas en producción</li>
+        <li><span class="bullet-red">✗</span>Menor comunidad que MongoDB; menor número de drivers y herramientas de terceros</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-couchbase">◆ <span>Campos de Uso</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">→</span><strong>Telecomunicaciones:</strong> gestión de perfiles de usuario a escala de millones</li>
+        <li><span class="bullet-teal">→</span><strong>Turismo y viajes:</strong> sistemas de reservas con alta concurrencia (Marriott, United Airlines)</li>
+        <li><span class="bullet-teal">→</span><strong>Gaming:</strong> estado de partidas, inventarios y rankings en tiempo real</li>
+        <li><span class="bullet-teal">→</span><strong>Retail:</strong> carritos de compra, sesiones y catálogos de productos</li>
+      </ul>
+    </div>
+    <div class="highlight-box hl-couchbase">
+      <div class="hl-num" style="color:#0D47A1">30ms</div>
+      <div class="hl-text"><strong style="color:#0D47A1">Latencia P99 garantizada en configuraciones de producción</strong>Linkedin, PayPal y Amadeus (gestión de vuelos) confían en Couchbase para manejar millones de transacciones por hora con alta disponibilidad.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PERST -->
+<div class="page db-page">
+  <div class="db-banner bg-perst">
+    <div><div class="db-name">Perst</div><div style="font-size:12px;color:rgba(255,255,255,0.7);font-family:Montserrat,sans-serif;margin-top:4px">McObject LLC · Orientada a objetos · Java &amp; C#</div></div>
+    <div class="db-type-badge">Orientada a Objetos (OODB)</div>
+  </div>
+  <div class="db-body">
+    <div class="db-section">
+      <div class="db-section-title ic-perst">◆ <span>Características</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">›</span>BD orientada a objetos de <strong>código abierto</strong>: los datos se persisten como objetos Java o C# directamente</li>
+        <li><span class="bullet-teal">›</span>Soporte para <strong>MVCC</strong> (Control de Concurrencia Multi-Versión) para transacciones concurrentes</li>
+        <li><span class="bullet-teal">›</span>Indexación mediante B-trees, árboles R y listas de omisión (skip lists)</li>
+        <li><span class="bullet-teal">›</span>Disponible también en versión "Lite" para sistemas embebidos y dispositivos móviles (J2ME)</li>
+        <li><span class="bullet-teal">›</span>Persistencia transparente: objetos se almacenan sin necesidad de mapeo ORM</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-perst">◆ <span>Ventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">✓</span>Eliminación del impedance mismatch: no hay conversión objeto-relacional</li>
+        <li><span class="bullet-teal">✓</span>Excelente rendimiento en aplicaciones Java/.NET con modelos de objetos complejos</li>
+        <li><span class="bullet-teal">✓</span>Muy ligero y embebible: ideal para aplicaciones standalone sin servidor de BD</li>
+        <li><span class="bullet-teal">✓</span>API sencilla y directa integrada con el lenguaje de programación</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-perst">◆ <span>Desventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-red">✗</span>Limitado a ecosistemas Java y C#: no hay soporte nativo para otros lenguajes</li>
+        <li><span class="bullet-red">✗</span>Escasa comunidad activa y documentación desactualizada; proyecto con poca actividad reciente</li>
+        <li><span class="bullet-red">✗</span>No apto para arquitecturas distribuidas ni aplicaciones con requerimientos de alta concurrencia</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-perst">◆ <span>Campos de Uso</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">→</span><strong>Sistemas embebidos:</strong> dispositivos con recursos limitados (sensores, controladores industriales)</li>
+        <li><span class="bullet-teal">→</span><strong>Aplicaciones desktop:</strong> software de escritorio Java/.NET que requieren persistencia local</li>
+        <li><span class="bullet-teal">→</span><strong>Prototipos:</strong> desarrollo rápido de aplicaciones con modelos de objetos ricos</li>
+        <li><span class="bullet-teal">→</span><strong>Telecomunicaciones:</strong> almacenamiento de configuraciones de red en dispositivos edge</li>
+      </ul>
+    </div>
+    <div class="highlight-box hl-perst">
+      <div class="hl-num" style="color:#4A148C">0ms</div>
+      <div class="hl-text"><strong style="color:#4A148C">Overhead de mapeo ORM — persistencia 100% transparente</strong>Perst elimina la capa de mapeo objeto-relacional, resultando en código más limpio y rendimiento superior para aplicaciones orientadas a objetos de mediana escala.</div>
+    </div>
+  </div>
+</div>
+
+<!-- MyOODB -->
+<div class="page db-page">
+  <div class="db-banner bg-myoodb">
+    <div><div class="db-name">MyOODB</div><div style="font-size:12px;color:rgba(255,255,255,0.7);font-family:Montserrat,sans-serif;margin-top:4px">My Object-Oriented Database · Python nativo</div></div>
+    <div class="db-type-badge">Orientada a Objetos (OODB)</div>
+  </div>
+  <div class="db-body">
+    <div class="db-section">
+      <div class="db-section-title ic-myoodb">◆ <span>Características</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">›</span>BD orientada a objetos implementada en <strong>Python puro</strong> sin dependencias externas</li>
+        <li><span class="bullet-teal">›</span>Persistencia de objetos Python mediante serialización con el módulo <strong>pickle</strong></li>
+        <li><span class="bullet-teal">›</span>Soporte para herencia de clases, polimorfismo y referencias entre objetos persistentes</li>
+        <li><span class="bullet-teal">›</span>Transacciones básicas con soporte de rollback y commit</li>
+        <li><span class="bullet-teal">›</span>Interfaz de consulta orientada a objetos sin necesidad de SQL ni lenguajes adicionales</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-myoodb">◆ <span>Ventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">✓</span>Integración perfecta con Python: los objetos se almacenan como son, sin transformación</li>
+        <li><span class="bullet-teal">✓</span>Sin necesidad de mapeo ORM (como SQLAlchemy): código más simple y directo</li>
+        <li><span class="bullet-teal">✓</span>Ideal para proyectos académicos y prototipos de investigación en Python</li>
+        <li><span class="bullet-teal">✓</span>Muy ligero: apropiado para aplicaciones con recursos de hardware limitados</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-myoodb">◆ <span>Desventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-red">✗</span>Exclusivo de Python: no hay interoperabilidad con otros lenguajes o plataformas</li>
+        <li><span class="bullet-red">✗</span>No diseñado para entornos distribuidos ni para alta concurrencia de múltiples usuarios</li>
+        <li><span class="bullet-red">✗</span>Documentación escasa; comunidad muy pequeña; riesgo de falta de soporte a largo plazo</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-myoodb">◆ <span>Campos de Uso</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">→</span><strong>Investigación académica:</strong> experimentos con modelos de datos orientados a objetos</li>
+        <li><span class="bullet-teal">→</span><strong>Scripts de ciencia de datos:</strong> almacenamiento de resultados intermedios de análisis</li>
+        <li><span class="bullet-teal">→</span><strong>Automatización:</strong> almacenamiento persistente de configuraciones en herramientas Python</li>
+        <li><span class="bullet-teal">→</span><strong>Prototipos:</strong> desarrollo ágil de aplicaciones con persistencia de objetos Python</li>
+      </ul>
+    </div>
+    <div class="highlight-box hl-myoodb">
+      <div class="hl-num" style="color:#1B5E20">100%</div>
+      <div class="hl-text"><strong style="color:#1B5E20">Python nativo — sin dependencias externas ni ORM</strong>MyOODB representa la filosofía "pythónica" aplicada a bases de datos: simple, legible y directo al grano. Ideal para el ecosistema de ciencia de datos y automatización.</div>
+    </div>
+  </div>
+</div>
+
+<!-- HYPERTABLE -->
+<div class="page db-page">
+  <div class="db-banner bg-hypertable">
+    <div><div class="db-name">Hypertable</div><div style="font-size:12px;color:rgba(255,255,255,0.7);font-family:Montserrat,sans-serif;margin-top:4px">Basado en Google BigTable · C++ · Open Source</div></div>
+    <div class="db-type-badge">Orientada a Columnas (Wide-Column)</div>
+  </div>
+  <div class="db-body">
+    <div class="db-section">
+      <div class="db-section-title ic-hypertable">◆ <span>Características</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">›</span>Implementación de código abierto del modelo de datos de <strong>Google BigTable</strong> en C++</li>
+        <li><span class="bullet-teal">›</span>Almacena datos en tablas dispersas ordenadas por clave de fila, familia de columnas y timestamp</li>
+        <li><span class="bullet-teal">›</span>Diseñado para <strong>escala masiva</strong>: petabytes de datos en clusters de hardware commodity</li>
+        <li><span class="bullet-teal">›</span>Se integra con sistemas de archivos distribuidos: HDFS (Hadoop) y KosmosFS</li>
+        <li><span class="bullet-teal">›</span>Lenguaje de consulta <strong>HQL</strong> (Hypertable Query Language) similar a SQL básico</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-hypertable">◆ <span>Ventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">✓</span>Rendimiento superior a HBase en benchmarks de escritura intensiva según estudios comparativos</li>
+        <li><span class="bullet-teal">✓</span>Arquitectura inspirada en BigTable de Google: probada a escala masiva en producción real</li>
+        <li><span class="bullet-teal">✓</span>Excelente para análisis de series temporales, logs y datos de telemetría</li>
+        <li><span class="bullet-teal">✓</span>Ideal para cargas de trabajo OLAP: consultas analíticas sobre grandes volúmenes</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-hypertable">◆ <span>Desventajas</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-red">✗</span>Proyecto poco activo: el repositorio oficial no recibe mantenimiento regular desde ~2015</li>
+        <li><span class="bullet-red">✗</span>Comunidad muy pequeña comparada con HBase o Cassandra; soporte limitado</li>
+        <li><span class="bullet-red">✗</span>Configuración compleja y curva de aprendizaje pronunciada para equipos pequeños</li>
+      </ul>
+    </div>
+    <div class="db-section">
+      <div class="db-section-title ic-hypertable">◆ <span>Campos de Uso</span></div>
+      <ul class="db-list">
+        <li><span class="bullet-teal">→</span><strong>Big Data analytics:</strong> procesamiento de logs de acceso web a escala de terabytes</li>
+        <li><span class="bullet-teal">→</span><strong>Motores de búsqueda:</strong> indexación de contenido web a gran escala</li>
+        <li><span class="bullet-teal">→</span><strong>Telecomunicaciones:</strong> registros de llamadas (CDR) y telemetría de red</li>
+        <li><span class="bullet-teal">→</span><strong>Finanzas:</strong> análisis histórico de transacciones y series temporales de precios</li>
+      </ul>
+    </div>
+    <div class="highlight-box hl-hypertable">
+      <div class="hl-num" style="color:#0D47A1">PB</div>
+      <div class="hl-text"><strong style="color:#0D47A1">Escala a petabytes sobre hardware commodity estándar</strong>Hypertable fue diseñado para replicar la arquitectura que permite a Google indexar toda la Web, distribuyendo datos en miles de nodos de bajo costo con tolerancia a fallos.</div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARATIVA -->
+<div class="page comp-page">
+  <div class="section-label">Sección 08</div>
+  <div class="page-title">Tabla Comparativa</div>
+  <div class="title-bar"></div>
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th style="width:13%">Sistema</th>
+        <th style="width:14%">Tipo NoSQL</th>
+        <th style="width:13%">Modelo</th>
+        <th style="width:20%">Ventaja Principal</th>
+        <th style="width:20%">Desventaja Principal</th>
+        <th style="width:20%">Uso Típico</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong style="color:#00684A">MongoDB</strong></td>
+        <td><span class="db-badge" style="background:#E8F5E9;color:#1B5E20">Documentos</span></td>
+        <td>BSON / JSON</td>
+        <td>Esquema flexible, consultas ricas, gran ecosistema</td>
+        <td>Alto consumo de memoria; JOINs costosos</td>
+        <td>E-commerce, redes sociales, CMS, IoT</td>
+      </tr>
+      <tr>
+        <td><strong style="color:#CC0000">Redis</strong></td>
+        <td><span class="db-badge" style="background:#FFF3E0;color:#E65100">Clave-Valor</span></td>
+        <td>In-Memory / KV</td>
+        <td>Velocidad extrema, &gt;1M ops/seg, estructuras de datos ricas</td>
+        <td>Limitado por tamaño de RAM disponible</td>
+        <td>Caché, sesiones, colas, leaderboards</td>
+      </tr>
+      <tr>
+        <td><strong style="color:#0055A4">Couchbase</strong></td>
+        <td><span class="db-badge" style="background:#E3F2FD;color:#0D47A1">Doc + KV</span></td>
+        <td>JSON / N1QL</td>
+        <td>Latencia P99 baja y predecible; soporte móvil nativo</td>
+        <td>Licencia enterprise costosa; menor comunidad</td>
+        <td>Turismo, gaming, retail, telecom</td>
+      </tr>
+      <tr>
+        <td><strong style="color:#5E35B1">Perst</strong></td>
+        <td><span class="db-badge" style="background:#F3E5F5;color:#4A148C">Objetos</span></td>
+        <td>OODB / Java-C#</td>
+        <td>Sin impedance mismatch; persistencia transparente</td>
+        <td>Solo Java/.NET; no distribuido</td>
+        <td>Embebidos, desktop, prototipos Java</td>
+      </tr>
+      <tr>
+        <td><strong style="color:#2E7D32">MyOODB</strong></td>
+        <td><span class="db-badge" style="background:#E8F5E9;color:#1B5E20">Objetos</span></td>
+        <td>OODB / Python</td>
+        <td>Integración 100% Python; cero dependencias externas</td>
+        <td>Solo Python; no concurrente; poca documentación</td>
+        <td>Investigación, ciencia de datos, scripts</td>
+      </tr>
+      <tr>
+        <td><strong style="color:#1565C0">Hypertable</strong></td>
+        <td><span class="db-badge" style="background:#E3F2FD;color:#0D47A1">Columnas</span></td>
+        <td>Wide-Column / HQL</td>
+        <td>Escala a petabytes; alto rendimiento en escritura</td>
+        <td>Proyecto poco activo; comunidad mínima</td>
+        <td>Big Data, logs, series temporales, finanzas</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+    <div style="padding:14px;background:#0A192F;border-radius:8px">
+      <div style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;color:#64FFDA;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Mejor Escalabilidad</div>
+      <div style="font-size:12px;color:#CCD6F6">MongoDB y Couchbase lideran en escalabilidad horizontal para aplicaciones de producción a gran escala</div>
+    </div>
+    <div style="padding:14px;background:#0A192F;border-radius:8px">
+      <div style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;color:#64FFDA;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Mayor Velocidad</div>
+      <div style="font-size:12px;color:#CCD6F6">Redis es insuperable en velocidad de operaciones gracias a su arquitectura completamente en memoria RAM</div>
+    </div>
+    <div style="padding:14px;background:#0A192F;border-radius:8px">
+      <div style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;color:#64FFDA;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Uso Especializado</div>
+      <div style="font-size:12px;color:#CCD6F6">Perst, MyOODB e Hypertable cubren nichos específicos donde los sistemas generalistas no son óptimos</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSIONES -->
+<div class="page conc-page">
+  <div class="section-label">Sección 09</div>
+  <div class="page-title">Conclusiones</div>
+  <div class="title-bar"></div>
+  <div class="conc-quote"><p>"Las bases de datos NoSQL no reemplazan al modelo relacional — lo complementan. La clave está en elegir la herramienta correcta para cada problema específico." — Principio de Polyglot Persistence</p></div>
+  <div class="conc-2col">
+    <div class="conc-text">
+      <p>El análisis de los seis sistemas estudiados confirma que el ecosistema NoSQL no es monolítico: cada familia de bases de datos resuelve un conjunto específico de problemas. <strong>MongoDB</strong> y <strong>Couchbase</strong> lideran para aplicaciones web y móviles de gran escala; <strong>Redis</strong> es irremplazable cuando la latencia es crítica; <strong>Perst</strong> y <strong>MyOODB</strong> ofrecen persistencia transparente para proyectos orientados a objetos; e <strong>Hypertable</strong> brinda capacidad analítica a escala masiva.</p>
+      <p style="margin-top:12px">El patrón emergente en la industria es la <em>persistencia políglota</em>: una misma aplicación puede usar Redis para caché, MongoDB para datos de usuario y Hypertable para analytics, aprovechando las fortalezas de cada paradigma.</p>
+    </div>
+    <div>
+      <div class="conc-text">
+        <p>Las organizaciones que han adoptado NoSQL reportan mejoras significativas en: tiempo de desarrollo (esquemas flexibles), costos de infraestructura (hardware commodity), y capacidad de respuesta ante cambios de requisitos.</p>
+        <p style="margin-top:12px">Sin embargo, la elección de un sistema NoSQL debe considerar cuidadosamente las necesidades de consistencia, el volumen de datos esperado, las habilidades del equipo y el presupuesto disponible para licencias.</p>
+      </div>
+      <div class="future-card">
+        <h4>Tendencias 2026+</h4>
+        <p>· Bases de datos multi-modelo (un sistema, múltiples paradigmas)<br>· Integración nativa con IA/ML (búsqueda vectorial en MongoDB Atlas)<br>· Serverless y BD gestionadas en la nube como servicio<br>· Mayor adopción de estándares para facilitar migración</p>
+      </div>
+    </div>
+  </div>
+  <div class="refs">
+    <strong>Referencias Bibliográficas:</strong><br>
+    Joyanes, L. (2020). <em>Inteligencia de Negocios y Analítica de Datos</em>. Alfaomega. &nbsp;·&nbsp;
+    AWS. (s.f.). ¿Qué son las bases de datos NoSQL? https://aws.amazon.com/es/nosql/ &nbsp;·&nbsp;
+    Parra, G. (2026). <em>Tema 1: Bases de Datos No relacionales (NoSQL)</em>. UCLA, Programa Ing. Telemática. &nbsp;·&nbsp;
+    MongoDB Documentation (2026). https://www.mongodb.com/docs &nbsp;·&nbsp;
+    Redis Documentation (2026). https://redis.io/docs &nbsp;·&nbsp;
+    Couchbase Documentation (2026). https://docs.couchbase.com &nbsp;·&nbsp;
+    DB-Engines Ranking (mayo 2026). https://db-engines.com/en/ranking
+  </div>
+</div>
+
+<!-- CONTRAPORTADA -->
+<div class="page back-cover">
+  <div class="bc-circle"><div class="bc-circle-text">UCLA</div></div>
+  <div style="font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;color:#64FFDA;letter-spacing:3px;text-transform:uppercase">NoSQL Review · 2026-1</div>
+  <div class="bc-phrase">Los datos son el nuevo petróleo.<br><span>NoSQL</span> es la refinería.</div>
+  <div class="bc-line"></div>
+  <div class="bc-credits">
+    <strong style="color:#CCD6F6;font-family:Montserrat,sans-serif">Equipo A</strong><br>
+    Electiva I — Tecnología de Base de Datos Avanzadas (INT533)<br>
+    Programa de Ingeniería Telemática<br>
+    Universidad Centroccidental "Lisandro Alvarado"<br>
+    Barquisimeto, Venezuela · Lapso 2026-1<br><br>
+    <span style="color:#4A5568;font-size:11px">Entregado: 29 de mayo de 2026 · Docente: Ing. Gisela Parra</span>
+  </div>
+</div>
+
+</div>
